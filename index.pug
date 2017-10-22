@@ -1,0 +1,150 @@
+doctype html
+include ~html-webpack-template-pug/mixins.pug
+
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+        block css
+            link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css")
+            link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css")
+            link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+            link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Oxygen:light")
+            +CSS
+            script(src="/assets/particles.min.js")
+    body
+        header
+            a(href="#")
+                img(src="/assets/pic/header-logo.png")
+            a(href="#")
+                img.pull-right(src="/assets/pic/menu.png")
+        #fullpage
+            script.
+                particlesJS.load('particles-js', '/assets/particles.json', function() {});
+            #particles-js
+            .hero.section
+                .container
+                    .row
+                        .logo-blue.col-sm-6
+                            img.img-responsive(src="/assets/pic/logo-blue.png")
+                        .introduction.col-sm-6
+                            h2 powering intelligence like it's 2027
+                            hr.rounded-rectangle.is-shifted-down.hidden-xs
+                img.lt-triangle.img-responsive.hidden-xs(src="/assets/pic/lt-triangle.png")
+            .value-proposition.section
+                .container
+                    .row
+                        .col-sm-offset-1.col-sm-6
+                            .title
+                                h1 value
+                                h1 proposition
+                                hr.rounded-rectangle.hidden-xs
+                            .description
+                                h4 We make massive scale
+                                h4 Machine Intelligence adoption
+                                h4 easy and actionable
+                            .sub-heading-wrapper
+                                h5 01. Effect on KPI’s
+                                h5 02. Future Proofing
+                                h5 03. Competitive Advantage
+                        .col-sm-5
+                            img.img-responsive(src="/assets/pic/vp-triangle.png")
+            .section
+                .container
+                    .row
+                        .col-sm-offset-1.col-sm-6
+                            .title
+                                h1 Our
+                                h1 Products
+                                hr.rounded-rectangle.hidden-xs
+                            .description
+                                h4 Never again fear novel data sources and types, nor suffer the tedium of unending data presentation. Be free to focus instead on using your creativity to extract meaning and value from diverse and massive data sets
+                            .spacer-sm-50.spacer-xs-10
+                            a.btn-discover(href="#") Discover
+                                img(src="/assets/pic/white-right-arrow.png")
+                        .col-sm-5
+                            img.img-responsive.hidden-xs(src="/assets/pic/logo.png")
+            .current-updates.section
+                img.updates-web-left.hidden-sm.hidden-xs(src="/assets/pic/blue-web-left.png")
+                img.two-triangles.hidden-sm.hidden-xs(src="/assets/pic/two-triangles.png")
+                img.triangle.hidden-sm.hidden-xs(src="/assets/pic/triangle.png")
+                .container
+                    .row
+                        .col-md-3
+                            .title
+                                h1 current
+                                h1 updates
+                            .spacer-sm-15
+                            hr.rounded-rectangle.hidden-xs
+                            .spacer-sm-15
+                        .info-wrapper.col-md-9
+                            img#vertical-line(src="/assets/pic/vertical-line.png")
+                            .info.row
+                                .text-right.col-xs-5
+                                    h6 Featured in Park Madison Partners Report
+                                    p Machine Colony featured in Park Madison Partners Outlook 2017 report
+                                .col-xs-1
+                                .col-xs-6
+                                    img(src="/assets/pic/park-madison.png")
+                            .info.row
+                                .text-right.col-xs-5
+                                    img.china-cctv-img.img-responsive(src="/assets/pic/cctv-logo.png")
+                                .col-xs-1
+                                .col-xs-6
+                                    h6 Interview with Chinese national media
+                            .info.row
+                                .text-right.col-xs-5
+                                    h6.info-title Interview with Dubai Holding
+                                    p.info-description Dubai Holding interviewed Machine Colony Chief Product Officer Greg Harris on the transformative capabilities of Spire and bringing Machine Intelligence into the enterprise.
+                                .col-xs-1
+                                .col-xs-6
+                                    img.dubai-holding-logo.img-responsive(src="/assets/pic/dubai-holding.png")
+                            .info.row
+                                .text-right.col-xs-5
+                                    img(src="/assets/pic/dfa-logo.png")
+                                .col-xs-1
+                                .col-xs-6
+                                    h6 Machine Colony accepted into Dubai Future Accelerators
+                                    p Out of nearly 2,300 applicants from around the world, Machine Colony is one of just 31 startups selected to join the largest government-supported accelerator in the world.
+            .mi-pipeline.section
+                .container
+                    .row
+                        .col-sm-6
+                            .title
+                                h1 m1
+                                h1 pipeline
+                                hr.rounded-rectangle.hidden-xs
+                            .description
+                                h4 Our Machine Intelligence-powered solutions exemplify three key imperatives:
+                                h4 Unify diverse data sets, discover linkages across micro and macro contexts,
+                                h4 and present insights in an actionable manner.
+                            .spacer-sm-50
+                            a.btn-discover(href="#") Discover
+                                img(src="/assets/pic/white-right-arrow.png")
+                        .col-sm-6
+                            img.img-responsive(src="/assets/pic/bg-graph-mi.png")
+            .contact-us.section.fp-auto-height
+                .container
+                    img(src="/assets/pic/web-contact-right.png")
+                    .row
+                        .col-sm-6
+                            .title
+                                h1 Contact
+                                h1 Us
+                            .spacer-sm-15
+                            hr.rounded-rectangle.hidden-xs
+                        .col-sm-6
+                            h4.description We make machine intelligence accessible for leaders and doers without the need to start a data science team.
+                            .social-icons
+                                a(href="")
+                                    i.fa.fa-envelope
+                                a(href="")
+                                    i.fa.fa-twitter
+        footer
+            .text-center Copyright (C) 2017 Machine Colony Inc.
+        block scripts
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js")
+            +JS

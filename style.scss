@@ -1,0 +1,299 @@
+html, body {
+    background-color: #141519;
+    color: #fff;
+    font-family: "oxygen", Arial, sans-serif;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+
+    header {
+        position: fixed;
+        top: 60px;
+        left: 75px;
+        right: 75px;
+        z-index: 3;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100vw;
+    height: 75vh;
+    z-index: 1;
+}
+
+.hero {
+    position: relative;
+
+    .lt-triangle {
+        position: absolute;
+        top: 0;
+        width: 52%;
+    }
+
+    .logo-blue {
+        margin-top: -60px;
+        position: relative;
+        z-index: 1;
+
+        img {
+            height: 65vh;
+            float: right;
+        }
+    }
+
+    .introduction {
+        padding-top: 160px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-image: url('/assets/pic/hero-background.png');
+        background-size: 100% 100%;
+    }
+}
+
+.value-proposition {
+    .description {
+        margin-bottom: 10px;
+    }
+
+    .sub-heading-wrapper {
+        width: 360px;
+
+        h5 {
+            display: inline-block;
+            height: 20px;
+            line-height: 50px;
+            width: 50%;
+            opacity: 0.8;
+
+            &:last-child {
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.current-updates {
+    background-color: #17191F;
+    position: relative;
+
+    .updates-web-left {
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+    }
+
+    .two-triangles {
+        position: absolute;
+        right: 0;
+        top: -10%;
+    }
+
+    .triangle {
+        position: absolute;
+        right: 0;
+        bottom: -130px;
+    }
+
+    .info-wrapper {
+        position: relative;
+
+        p {
+            color: #dedfe4;
+            line-height: 22px;
+            font-size: 13px;
+            margin: 5px 0 15px;
+        }
+    }
+
+    #vertical-line {
+        position: absolute;
+        left: 45%;
+        top: 2%;
+        height: 95%;
+    }
+
+    .info {
+        padding: 15px 0;
+
+        .dubai-holding-logo {
+            height: 120px;
+            margin-top: -30px;
+        }
+
+        .china-cctv-img {
+            float: right;
+            height: 40px;
+        }
+    }
+}
+
+.contact-us {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 175px;
+
+    .description {
+        color: #fff;
+        margin-bottom: 40px;
+        margin-top: 0;
+    }
+
+    .social-icons {
+        .fa {
+            font-size: 18px;
+        }
+        a:first-child {
+            margin-right: 35px;
+        }
+    }
+
+    img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.rounded-rectangle {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 4px;
+    margin: 15px 0 0 0;
+    width: 70px;
+
+    &.is-shifted-down {
+        margin-top: 25px;
+    }
+}
+
+.title {
+    font-family: "oxygen", Arial, sans-serif;
+    line-height: 55px;
+    text-transform: uppercase;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.description {
+    font-family: "oxygen", Arial, sans-serif;
+    line-height: 33px;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.btn-discover {
+    width: 200px;
+    height: 45px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        width: 100%;
+        height: 100%;
+        content: '';
+        transform: skew(-30deg);
+        border: 1px solid #fff;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        z-index: -2;
+        opacity: 0.1;
+        transition: opacity .4s ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: url("/assets/pic/blue-polygon.png");
+        z-index: -1;
+    }
+
+    img {
+        position: absolute;
+        top: 5px;
+        right: 30px;
+    }
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+
+    &:link, &:hover, &:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+h1 {
+    line-height: 55px;
+    font-size: 50px;
+}
+
+h2 {
+    line-height: 50px;
+    font-size: 45px;
+}
+
+h4 {
+    line-height: 33px;
+    font-size: 24px;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+}
+
+h5 {
+    line-height: 20px;
+    font-size: 18px;
+}
+
+h6 {
+    line-height: 16.5px;
+    font-size: 15px;
+}
+
+@mixin spacer($prefix, $value, $unit: 'px') {
+    .spacer-#{$prefix}-#{$value} {
+        height: #{$value}#{$unit};
+    }
+}
+
+@include spacer('sm', 50);
+@include spacer('sm', 15);
